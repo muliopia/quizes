@@ -1,12 +1,12 @@
 <script setup>
 
-import {RouterView} from "vue-router"
+import {RouterView} from "vue-router";
 import quizesview from "./views/quizesview.vue"
 </script>
 <template>
   
   <div class="container"> 
-    <quizesview/>
+    <RouterView/>
     
     </div>
 </template>

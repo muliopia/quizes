@@ -1,7 +1,7 @@
 <script setup> 
 import { defineProps } from 'vue';
 import {RouterLink} from "vue-router"
-const {numberofcorrectanswer,quizquestionlength} =defineProps(["quizquestionlength","numberofcorrectanswer"])
+const {quizquestionlength,numberofcorrectanswer} =defineProps(["quizquestionlength","numberofcorrectanswer"])
 </script>
 <template>
     <div class="results">

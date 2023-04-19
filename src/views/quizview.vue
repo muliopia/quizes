@@ -3,28 +3,30 @@ import question from "../components/question.vue"
 import quizheader from "../components/quizheader.vue"
 import result from "../components/result.vue"
 import{useRoute} from "vue-router"
-import { ref,computed } from 'vue';
-import quizes from "../data/quizes.json"
+import { ref,watch,computed } from 'vue';
+import quizes from "../data/quizes.json";
+ 
+
+
 
 const route =useRoute()
-const quizid =parseIn(route.params.id);
+const quizid =parseInt(route.params.id);
 const quiz =quizes.find(q =>q.id ===quizid)
 const currentquestionIndex = ref(0);
-const numberOfCorrectAnswers = ref(0)
-const 
-showResults = ref(false)
+const numberOfCorrectAnswers = ref(0);
+const showResults = ref(false)
 
 
 
 
-const questionStatus=computed(() => '@{currentquestionIndex.value}')
-const barpercentage =computed(() => '${currentquestionindex.value/quiz.question}')
+const questionStatus=computed(() => `${currentquestionIndex.value}`)
+const barpercentage =computed(() => `${currentquestionIndex.value/quiz.question}`)
 const onOptionSelected =(iscorrect) =>{
     if(iscorrect){
         numberOfCorrectAnswers.value++;
 
     }
-    if(quiz.questions.length - 1=== currentQuestionIndex.value )
+    if(quiz.questions.length - 1=== currentquestionIndex.value )
 {
     showResults.value=true
 }

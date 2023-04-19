@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps,defineEmits } from 'vue';
-const emit =defineEmits(["$selectoption"])
+const emit =defineEmits(["selectoption"])
 
 const {question} =defineProps(["question"])
 
@@ -12,7 +12,7 @@ const emitSelectedOption =(isCorrect) =>{
 <template>
     <div class="question-container">
 
-        <h1 class="question">{{qusetion.text}}</h1>
+        <h1 class="question">{{question.text}}</h1>
        
     </div>
     <div class="option-container">
